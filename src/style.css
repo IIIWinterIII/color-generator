@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+
+    &__color-generator {
+    width: 100%;
+        
+    }
+
+    &__color-generator__display {
+        width: 50%;
+        height: 100px;
+        background-color: red;
+    }
+}
+
