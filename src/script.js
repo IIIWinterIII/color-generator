@@ -1,9 +1,14 @@
-const displayElement = document.querySelector(".container__color-generator__display");
-const titleColorElement = document.querySelector(".container__color-generator__title-color");
-const buttonGenerateColor = document.querySelector(".container__color-generator__button");
+const displayElement = document.querySelector(
+  ".container__color-generator__display"
+);
+const titleColorElement = document.querySelector(
+  ".container__color-generator__title-color"
+);
+const buttonGenerateColor = document.querySelector(
+  ".container__color-generator__button"
+);
 
-titleColorElement.textContent = '...'
-displayElement.style.backgroundColor = 'grey'
+titleColorElement.textContent = "...";
 
 let randomColorGeneration = () => {
   const randomColor = `#${Math.floor(Math.random() * 16777215)
@@ -13,9 +18,11 @@ let randomColorGeneration = () => {
   return randomColor;
 };
 
-
 buttonGenerateColor.addEventListener("click", () => {
-    let generationColor = randomColorGeneration()
-    titleColorElement.textContent = generationColor
+  let generationColor = randomColorGeneration();
 
-})
+  displayElement.style.border = "none";
+  displayElement.style.backgroundColor = generationColor;
+  titleColorElement.textContent = generationColor;
+  buttonGenerateColor.style.borderColor = generationColor;
+});
