@@ -15,6 +15,25 @@ html {
   display: flex;
 }
 
+/* История */
+.container__history-color {
+  width: 10%;
+  height: 100vh;
+  border-right: 1px solid white;
+}
+
+.container__history-color__color-item {
+  width: 100%;
+  height: 10%;
+  border-bottom: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Часть экрана генерация цветов */
+
 .container__color-generator {
   display: flex;
   flex-direction: column;
