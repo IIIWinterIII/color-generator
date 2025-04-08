@@ -33,6 +33,12 @@ html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.container__history-color__color-item--opacity {
+  opacity: 1;
 }
 
 /* Часть экрана генерация цветов */
@@ -49,6 +55,7 @@ html {
   width: 30%;
   height: 50px;
   border: 1px solid white;
+  transition: background-color 0.5s ease;
 }
 
 .container__color-generator__title-color {
@@ -61,4 +68,5 @@ html {
   padding: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  transition: border-color 0.5s ease;
 }

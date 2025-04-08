@@ -33,6 +33,10 @@ buttonGenerateColor.addEventListener("click", () => {
   newItemColor.style.backgroundColor = generationColor;
   newItemColor.textContent = generationColor;
   historyContainer.prepend(newItemColor);
+
+  setTimeout(() => {
+    newItemColor.classList.add("container__history-color__color-item--opacity");
+  }, 5);
 });
 
 historyContainer.addEventListener("click", (e) => {
