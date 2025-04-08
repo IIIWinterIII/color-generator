@@ -45,6 +45,10 @@ buttonGenerateColor.addEventListener("click", () => {
     titleColorElement.classList.remove(
       "container__color-generator__title-color--hidden"
     );
+    // иконка копирования
+    let iconCopyElement = document.createElement("i");
+    iconCopyElement.className = "fa-solid fa-copy";
+    titleColorElement.append(iconCopyElement);
 
     newItemColor.classList.add("container__history-color__color-item--opacity");
   }, 100);

@@ -78,15 +78,31 @@ html {
   transition: background-color 0.5s ease;
 }
 
+/* Текст цвета */
 .container__color-generator__title-color {
   margin: 1rem;
-  transition: opacity 1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 16px;
+  transition: border-color 0.3s ease, opacity 1s ease;
+}
+
+.container__color-generator__title-color:hover {
+  background: #f2f2f234;
+  border-color: #999999d4;
 }
 
 .container__color-generator__title-color--hidden {
   opacity: 0;
 }
 
+/* Кнопка генерации цвета */
 .container__color-generator__button {
   border: 1px solid white;
   background-color: transparent;
