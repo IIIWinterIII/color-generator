@@ -20,25 +20,37 @@ let randomColorGeneration = () => {
   return randomColor;
 };
 
+// Основной экран
 buttonGenerateColor.addEventListener("click", () => {
   let generationColor = randomColorGeneration();
 
   displayElement.style.border = "none";
   displayElement.style.backgroundColor = generationColor;
-  titleColorElement.textContent = generationColor;
   buttonGenerateColor.style.borderColor = generationColor;
 
+  titleColorElement.classList.add(
+    "container__color-generator__title-color--hidden"
+  );
+
+  // История
   const newItemColor = document.createElement("div");
   newItemColor.className = "container__history-color__color-item";
   newItemColor.style.backgroundColor = generationColor;
   newItemColor.textContent = generationColor;
+
   historyContainer.prepend(newItemColor);
 
   setTimeout(() => {
+    titleColorElement.textContent = generationColor;
+    titleColorElement.classList.remove(
+      "container__color-generator__title-color--hidden"
+    );
+
     newItemColor.classList.add("container__history-color__color-item--opacity");
-  }, 5);
+  }, 100);
 });
 
+// Копирование текст текста
 historyContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("container__history-color__color-item")) {
     navigator.clipboard

@@ -60,6 +60,11 @@ html {
 
 .container__color-generator__title-color {
   margin: 1rem;
+  transition: opacity 1s ease;
+}
+
+.container__color-generator__title-color--hidden {
+  opacity: 0;
 }
 
 .container__color-generator__button {
