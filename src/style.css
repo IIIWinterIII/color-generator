@@ -33,8 +33,28 @@ html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s ease, opacity 0.5s ease, transform 0.1s ease;
   opacity: 0;
+}
+
+.container__history-color__color-item--sucess {
+  transform: scale(0.95);
+  position: relative;
+}
+
+.container__history-color__color-item--sucess::after {
+  content: "✓ Скопировано";
+  position: absolute;
+  top: 60%;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: transform 0.3s ease;
 }
 
 .container__history-color__color-item--opacity {
@@ -73,5 +93,16 @@ html {
   padding: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease, background-color 0.5s ease,
+    transform 0.1s ease;
+  cursor: pointer;
+}
+
+.container__color-generator__button:hover {
+  background-color: rgba(0, 0, 0, 0.263);
+}
+
+.container__color-generator__button:active {
+  background-color: rgb(216, 216, 216);
+  transform: scale(1.05);
 }

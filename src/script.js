@@ -56,7 +56,13 @@ historyContainer.addEventListener("click", (e) => {
     navigator.clipboard
       .writeText(e.target.textContent)
       .then(() => {
-        console.log("Скопировано:", e.target.textContent);
+        e.target.classList.add("container__history-color__color-item--sucess");
+
+        setTimeout(() => {
+          e.target.classList.remove(
+            "container__history-color__color-item--sucess"
+          );
+        }, 600);
       })
       .catch((err) => {
         console.error("Ошибка копирования:", err);
