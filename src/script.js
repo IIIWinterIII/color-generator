@@ -58,24 +58,22 @@ buttonGenerateColor.addEventListener("click", () => {
 // Копирование текста в TITLE
 titleColorElement.addEventListener("click", () => {
   if (titleColorElement.textContent !== "...") {
-
-    navigator.clipboard.writeText(titleColorElement.textContent)
-    .then(() => {
-      titleColorElement.classList.add(
-        "container__color-generator__title-color--copy"
-      );
-  
-      setTimeout(() => {
-        titleColorElement.classList.remove(
+    navigator.clipboard
+      .writeText(titleColorElement.textContent)
+      .then(() => {
+        titleColorElement.classList.add(
           "container__color-generator__title-color--copy"
         );
-      }, 600);
-    })
-    .catch((err) => {
-      console.error("Ошибка копирования:", err);
-    })
 
-    
+        setTimeout(() => {
+          titleColorElement.classList.remove(
+            "container__color-generator__title-color--copy"
+          );
+        }, 600);
+      })
+      .catch((err) => {
+        console.error("Ошибка копирования:", err);
+      });
   }
 });
 
