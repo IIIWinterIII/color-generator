@@ -55,9 +55,32 @@ buttonGenerateColor.addEventListener("click", () => {
   }, 100);
 });
 
-// Копирование текст текста
-historyContainer.addEventListener("click", (e) => {
+// Копирование текста в TITLE
+titleColorElement.addEventListener("click", () => {
+  if (titleColorElement.textContent !== "...") {
 
+    navigator.clipboard.writeText(titleColorElement.textContent)
+    .then(() => {
+      titleColorElement.classList.add(
+        "container__color-generator__title-color--copy"
+      );
+  
+      setTimeout(() => {
+        titleColorElement.classList.remove(
+          "container__color-generator__title-color--copy"
+        );
+      }, 600);
+    })
+    .catch((err) => {
+      console.error("Ошибка копирования:", err);
+    })
+
+    
+  }
+});
+
+// Копирование текст текста в истории
+historyContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("container__history-color__color-item")) {
     navigator.clipboard
       .writeText(e.target.textContent)
@@ -70,7 +93,7 @@ historyContainer.addEventListener("click", (e) => {
           );
         }, 600);
       })
-      
+
       .catch((err) => {
         console.error("Ошибка копирования:", err);
       });

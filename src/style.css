@@ -83,6 +83,7 @@ html {
   margin: 1rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 6px 10px;
   border: 1px solid #ccc;
@@ -90,15 +91,18 @@ html {
   cursor: pointer;
   font-family: monospace;
   font-size: 16px;
-  transition: border-color 0.3s ease, opacity 1s ease;
+  transition: border-color 0.3s ease, opacity 1s ease, transform 0.3s ease;
   position: relative;
+}
+
+.container__color-generator__title-color--copy {
+  transform: scale(1.1);
 }
 
 .container__color-generator__title-color--copy::after {
   content: "✓ Скопировано";
   position: absolute;
   top: -20px;
-  left: -30px;
   padding: 4px 8px;
   background-color: rgba(0, 0, 0, 0.75);
   color: #fff;
