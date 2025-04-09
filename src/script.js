@@ -45,6 +45,7 @@ buttonGenerateColor.addEventListener("click", () => {
     titleColorElement.classList.remove(
       "container__color-generator__title-color--hidden"
     );
+
     // иконка копирования
     let iconCopyElement = document.createElement("i");
     iconCopyElement.className = "fa-solid fa-copy";
@@ -56,6 +57,7 @@ buttonGenerateColor.addEventListener("click", () => {
 
 // Копирование текст текста
 historyContainer.addEventListener("click", (e) => {
+
   if (e.target.classList.contains("container__history-color__color-item")) {
     navigator.clipboard
       .writeText(e.target.textContent)
@@ -68,6 +70,7 @@ historyContainer.addEventListener("click", (e) => {
           );
         }, 600);
       })
+      
       .catch((err) => {
         console.error("Ошибка копирования:", err);
       });

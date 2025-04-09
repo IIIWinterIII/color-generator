@@ -91,6 +91,23 @@ html {
   font-family: monospace;
   font-size: 16px;
   transition: border-color 0.3s ease, opacity 1s ease;
+  position: relative;
+}
+
+.container__color-generator__title-color--copy::after {
+  content: "✓ Скопировано";
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateY(5px);
+  transition: transform 0.3s ease;
 }
 
 .container__color-generator__title-color:hover {
