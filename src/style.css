@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid greenyellow;
 }
 
 body,
@@ -68,7 +69,7 @@ html {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .container__color-generator__display {
@@ -144,23 +145,57 @@ html {
   transform: scale(1.05);
 }
 
+/* Маленькие мобильные телефоны */
+@media (max-width: 374px) {
+  /* Стили для маленьких экранов */
+  .container__history-color {
+    width: 40%;
+    font-size: 15px;
+  }
+
+  .container__color-generator__display {
+    width: 60%;
+  }
+
+  .container__color-generator__title-color {
+    margin: 2em 0;
+  }
+}
 
 /* Мобильные телефоны */
-@media (max-width: 425px) {
-  /* Стили для маленьких экранов */
+@media (min-width: 375px) and (max-width: 425px) {
+  .container__history-color {
+    width: 30%;
+  }
+
+  .container__color-generator__display {
+    width: 60%;
+  }
+
+  .container__color-generator__title-color {
+    margin: 2em 0;
+  }
 }
 
 /* Планшеты */
-@media (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   /* Стили для планшетов в портретном режиме */
+  .container__history-color {
+    width: 30%;
+  }
+
+  .container__color-generator__display {
+    width: 70%;
+  }
 }
 
 /* Планшеты в ландшафтном режиме и меньше */
-@media (max-width: 1024px) {
-  /* Стили для планшетов в ландшафтной ориентации */
-}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container__history-color {
+    width: 30%;
+  }
 
-/* Десктопы */
-@media (min-width: 1200px) {
-  /* Стили для больших экранов */
+  .container__color-generator__display {
+    width: 60%;
+  }
 }
