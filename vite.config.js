@@ -1,5 +1,3 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  base: '/color-generator/',
-});
+export default {
+    base: "/color-generator/",
+  };
