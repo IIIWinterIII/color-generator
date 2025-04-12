@@ -8,7 +8,7 @@ const buttonGenerateColor = document.querySelector(
   ".container__color-generator__button"
 );
 
-titleColorElement.textContent = "...";
+// titleColorElement.textContent = "...";
 
 const historyContainer = document.querySelector(".container__history-color");
 
