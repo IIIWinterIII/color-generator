@@ -187,7 +187,7 @@ html {
 /* Мобильные телефоны */
 @media (min-width: 375px) and (max-width: 425px) {
   .container__history-color {
-    width: 30%;
+    width: 35%;
   }
 
   .container__color-generator__display {
