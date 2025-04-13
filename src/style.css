@@ -5,8 +5,6 @@
   /* border: 1px solid greenyellow; */
 }
 
-
-
 body,
 html {
   width: 100%;
@@ -29,7 +27,6 @@ html {
   overflow: auto;
 }
 
-
 .container__history-color::-webkit-scrollbar {
   width: 5px;
 }
@@ -40,7 +37,7 @@ html {
 
 .container__history-color::-webkit-scrollbar-thumb {
   background-color: #000000;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .container__history-color::-webkit-scrollbar-thumb:hover {
@@ -187,7 +184,7 @@ html {
 /* Мобильные телефоны */
 @media (min-width: 375px) and (max-width: 425px) {
   .container__history-color {
-    width: 35%;
+    width: 40%;
   }
 
   .container__color-generator__display {
