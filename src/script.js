@@ -41,6 +41,7 @@ buttonGenerateColor.addEventListener("click", () => {
   historyContainer.prepend(newItemColor);
 
   setTimeout(() => {
+
     titleColorElement.textContent = generationColor;
     titleColorElement.classList.remove(
       "container__color-generator__title-color--hidden"
@@ -49,14 +50,17 @@ buttonGenerateColor.addEventListener("click", () => {
     // иконка копирования
     let iconCopyElement = document.createElement("i");
     iconCopyElement.className = "fa-solid fa-copy";
+
     titleColorElement.append(iconCopyElement);
 
     newItemColor.classList.add("container__history-color__color-item--opacity");
   }, 100);
+
 });
 
 // Копирование текста в TITLE
 titleColorElement.addEventListener("click", () => {
+
   if (titleColorElement.textContent !== "...") {
     navigator.clipboard
       .writeText(titleColorElement.textContent)
@@ -79,6 +83,7 @@ titleColorElement.addEventListener("click", () => {
 
 // Копирование текст текста в истории
 historyContainer.addEventListener("click", (e) => {
+  
   if (e.target.classList.contains("container__history-color__color-item")) {
     navigator.clipboard
       .writeText(e.target.textContent)
